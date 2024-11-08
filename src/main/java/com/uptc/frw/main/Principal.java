@@ -19,21 +19,23 @@ public class Principal {
         //Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
         em.getTransaction().begin();
         Persons vendedor =em.find(Persons.class, 1);
+
         if (vendedor != null) {
             List<Bill> bills=vendedor.getBillsVendedor();
             if (!bills.isEmpty()) {
                 double totalVentas = 0.0;
+
+
                 for (Bill bill : bills) {
-                    System.out.println("-------VENTAS-------");
-                    System.out.println("ID VENTA: "+ bill.getId());
-                    System.out.println("FECHA VENTA: "+bill.getFecha());
-                    System.out.println("ID CLIENTE : "+bill.getClienteFactura());
-                    System.out.println("ID VENDEDOR :"+bill.getVendedorFactura());
 
                     totalVentas += bill.getMontoTotal();
                 }
-
+                System.out.println("---------VENTAS TOTALES--------------------");
+                System.out.println("                                              ");
+                System.out.println("VENTAS DEL VENDEDOR : "+vendedor.getId());
                 System.out.println("TOTAL VENTAS : "+totalVentas);
+
+
             }else {
                 System.out.println("-------el vendedor no ha hecho ventas-------");
             }
