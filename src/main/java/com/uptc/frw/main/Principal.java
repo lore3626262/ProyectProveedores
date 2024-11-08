@@ -154,4 +154,29 @@ public class Principal {
         em.getTransaction().commit();
         em.close();
     }
+
+    public static void consultFacturas(){
+        //Crear un metodo que permita consultar todas las facturas de un cliente.
+        EntityManager em = PersistenceUtil.getEntityManager();
+
+        Persons cliente = em.find(Persons.class, 6);
+        if (cliente != null) {
+            //si el cliente existe obtine las facturas
+            List<Bill> facturas =cliente.getBillsclien();
+            if(!facturas.isEmpty()){
+                for (Bill factura: facturas) {
+                    System.out.println("------------------------------------------: ");
+                    System.out.println("Factura encontada ID: " + factura.getId());
+                    System.out.println("Fecha: " + factura.getFecha());
+                    System.out.println("ID Cliente: " + factura.getIdCliente());
+                    System.out.println("ID Vendedor: " + factura.getIdVendedor());
+                }
+            }else {
+                System.out.println("El cliente no tiene facturas");
+            }
+        }else {
+            System.out.println("El cliente no existe");
+        }
+        em.close();
+    }
 }
