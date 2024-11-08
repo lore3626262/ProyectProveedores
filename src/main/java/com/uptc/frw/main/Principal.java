@@ -6,6 +6,8 @@ import com.uptc.frw.model.Persons;
 import com.uptc.frw.model.Product;
 import com.uptc.frw.persistence.PersistenceUtil;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
