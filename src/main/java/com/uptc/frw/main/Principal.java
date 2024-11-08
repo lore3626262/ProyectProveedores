@@ -145,13 +145,13 @@ public class Principal {
         prod2.getProveedor().add(proveedor2);
 
         proveedor3.getProducts().add(prod3);
-        prod3.getProveedor().add(proveedor3);
+        prod3.getProveedor().add(proveedor2);
 
         proveedor4.getProducts().add(prod4);
-        prod4.getProveedor().add(proveedor4);
+        prod4.getProveedor().add(proveedor3);
 
         proveedor5.getProducts().add(prod5);
-        prod5.getProveedor().add(proveedor5);
+        prod5.getProveedor().add(proveedor3);
 
         // Persistir las relaciones de muchos a muchos
         em.persist(proveedor1);
@@ -185,6 +185,32 @@ public class Principal {
             }
         }else {
             System.out.println("El cliente no existe");
+        }
+        em.close();
+    }
+
+    public static void consultProveedores(){
+        //Crear un metodo que permita consultar los productos que provee un proveedor.
+        EntityManager em = PersistenceUtil.getEntityManager();
+        Persons provehedor = em.find(Persons.class, 27);
+        //CREACION DE UN PRODUCTO ASOCIADO
+
+
+        if (provehedor != null) {
+            List<Product> products = provehedor.getProducts();
+            if(!products.isEmpty()) {
+                for (Product product : products) {
+                    //imprimimos los productos
+                    System.out.println("PRODUCTOS PROVEHEDORES");
+                    System.out.println("ID: " + product.getId());
+                    System.out.println("NOMBRE PRODUCTO " + product.getNombre());
+                    System.out.println("PRECIO UNITARIO " + product.getPrecioUnitario());
+                }
+            }else{
+                System.out.println("no hay productos");
+            }
+        }else{
+            System.out.println("no hay proveedores");
         }
         em.close();
     }
