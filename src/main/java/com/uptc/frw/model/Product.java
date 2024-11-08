@@ -3,6 +3,7 @@ package com.uptc.frw.model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,6 +11,8 @@ import java.util.List;
 public class Product {
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "produc_seq")
+    @SequenceGenerator(name ="produc_seq",sequenceName ="PRODUC_SEQ",allocationSize=1 )
     private Long id;
 
     @Column(name = "NOMBRE")
@@ -27,7 +30,26 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "ID_PROVEEDOR")
 
     )
-    private List<Persons> Proveedor;
+
+    private List<Persons> Proveedor=new ArrayList<>();
+
+
+    public List<Persons> getProveedor() {
+        return Proveedor;
+    }
+
+    public void setProveedor(List<Persons> proveedor) {
+        Proveedor = proveedor;
+    }
+
+    public List<Details> getDetailsProduct() {
+        return detailsProduct;
+    }
+
+    public void setDetailsProduct(List<Details> detailsProduct) {
+        this.detailsProduct = detailsProduct;
+    }
+
 
     public Long getId() {
         return id;
