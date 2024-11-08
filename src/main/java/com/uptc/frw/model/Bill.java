@@ -5,6 +5,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,17 +14,19 @@ import java.util.List;
 public class Bill {
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "bill_seq")
+    @SequenceGenerator(name ="bill_seq",sequenceName = "FACT_SEQ", allocationSize = 1)
     private Long id;
 
     @Column(name = "FECHA")
     private Date fecha;
 
 
-    @Column(name = "ID_CLIENTE")
+    @Column(name = "ID_CLIENTE",insertable = false, updatable = false)
     private Long idCliente;
 
 
-    @Column(name = "ID_VENDEDOR")
+    @Column(name = "ID_VENDEDOR",insertable = false, updatable = false)
     private Long idVendedor;
 
     @ManyToOne
@@ -35,7 +38,31 @@ public class Bill {
     private Persons vendedorFactura;
 
     @OneToMany(mappedBy = "detailfact")
-    private List<Details> details;
+    private List<Details> details=new ArrayList<>();
+
+    public Persons getClienteFactura() {
+        return clienteFactura;
+    }
+
+    public void setClienteFactura(Persons clienteFactura) {
+        this.clienteFactura = clienteFactura;
+    }
+
+    public Persons getVendedorFactura() {
+        return vendedorFactura;
+    }
+
+    public void setVendedorFactura(Persons vendedorFactura) {
+        this.vendedorFactura = vendedorFactura;
+    }
+
+    public List<Details> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<Details> details) {
+        this.details = details;
+    }
 
     public Long getId() {
         return id;
