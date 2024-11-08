@@ -286,4 +286,8 @@ public class Principal {
 
         em.close();
     }
+
+    public static void generacionFactura(){
+
+    }
 }
