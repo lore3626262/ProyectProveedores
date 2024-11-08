@@ -108,15 +108,15 @@
     </schema>
     <schema id="34" parent="1" name="SISTEMA_PROVEEDORES">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <Current>1</Current>
-      <LastIntrospectionL1Timestamp>2024-11-08.03:15:05</LastIntrospectionL1Timestamp>
-      <LastIntrospectionL2Timestamp>2024-11-08.03:15:05</LastIntrospectionL2Timestamp>
-      <LastIntrospectionL3Timestamp>2024-11-08.03:15:05</LastIntrospectionL3Timestamp>
+      <LastIntrospectionL1Timestamp>2024-11-08.09:11:57</LastIntrospectionL1Timestamp>
+      <LastIntrospectionL2Timestamp>2024-11-08.09:11:57</LastIntrospectionL2Timestamp>
+      <LastIntrospectionL3Timestamp>2024-11-08.09:11:57</LastIntrospectionL3Timestamp>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2024-11-08.13:15:07</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-08.19:12:00</LastIntrospectionLocalTimestamp>
       <LastIntrospectionVersion>200820</LastIntrospectionVersion>
-      <ModifiedTimestamp>2024-11-08.03:14:31</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:34</ModifiedTimestamp>
       <ObjectId>114</ObjectId>
     </schema>
     <schema id="35" parent="1" name="SI_INFORMTN_SCHEMA">
@@ -59605,69 +59605,69 @@
     </synonym>
     <sequence id="7504" parent="34" name="DETALLE_SEQ">
       <CacheSize>20</CacheSize>
-      <CreatedTimestamp>2024-11-08.03:14:31</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:34</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:31</ModifiedTimestamp>
-      <ObjectId>79228</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:34</ModifiedTimestamp>
+      <ObjectId>79242</ObjectId>
       <SequenceIdentity>1(1)..100000</SequenceIdentity>
     </sequence>
     <sequence id="7505" parent="34" name="FACT_SEQ">
       <CacheSize>20</CacheSize>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79225</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79239</ObjectId>
       <SequenceIdentity>1(100)..1000000</SequenceIdentity>
     </sequence>
     <sequence id="7506" parent="34" name="PERSON_SEQ">
       <CacheSize>20</CacheSize>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79227</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79241</ObjectId>
       <SequenceIdentity>1(1)..10000</SequenceIdentity>
     </sequence>
     <sequence id="7507" parent="34" name="PRODUC_SEQ">
       <CacheSize>20</CacheSize>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79226</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79240</ObjectId>
       <SequenceIdentity>1(1)..1000</SequenceIdentity>
     </sequence>
     <table id="7508" parent="34" name="DETALLES">
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79223</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79237</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="7509" parent="34" name="FACTURAS">
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79221</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79235</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="7510" parent="34" name="PERSONAS">
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79215</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79229</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="7511" parent="34" name="PRODUCTOS">
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79217</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79231</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="7512" parent="34" name="PROVEEDOR_PRODUCTO">
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
       <DetailsLevel>3</DetailsLevel>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79219</ObjectId>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79233</ObjectId>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <column id="7513" parent="7508" name="ID">
@@ -59695,29 +59695,29 @@
     </column>
     <foreign-key id="7518" parent="7508" name="FK_FACTURA">
       <ColNames>ID_FACTURA</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_FACTURAS</RefKeyName>
       <RefTableName>FACTURAS</RefTableName>
     </foreign-key>
     <foreign-key id="7519" parent="7508" name="FK_PRODUCTO">
       <ColNames>ID_PRODUCTO</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_PRODUCTOS</RefKeyName>
       <RefTableName>PRODUCTOS</RefTableName>
     </foreign-key>
     <index id="7520" parent="7508" name="PK_DETALLES">
       <ColNames>ID</ColNames>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79224</ObjectId>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79238</ObjectId>
       <Unique>1</Unique>
       <TablespaceName>USERS</TablespaceName>
     </index>
     <key id="7521" parent="7508" name="PK_DETALLES">
       <InitiallyDeferred>1</InitiallyDeferred>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_DETALLES</UnderlyingIndexName>
     </key>
@@ -59743,29 +59743,29 @@
     </column>
     <foreign-key id="7526" parent="7509" name="FK_FACTURA_CLIENTE">
       <ColNames>ID_CLIENTE</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_PERSONAS</RefKeyName>
       <RefTableName>PERSONAS</RefTableName>
     </foreign-key>
     <foreign-key id="7527" parent="7509" name="FK_FACTURA_VENDEDOR">
       <ColNames>ID_VENDEDOR</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_PERSONAS</RefKeyName>
       <RefTableName>PERSONAS</RefTableName>
     </foreign-key>
     <index id="7528" parent="7509" name="PK_FACTURAS">
       <ColNames>ID</ColNames>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79222</ObjectId>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79236</ObjectId>
       <Unique>1</Unique>
       <TablespaceName>USERS</TablespaceName>
     </index>
     <key id="7529" parent="7509" name="PK_FACTURAS">
       <InitiallyDeferred>1</InitiallyDeferred>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_FACTURAS</UnderlyingIndexName>
     </key>
@@ -59801,15 +59801,15 @@
     </column>
     <index id="7536" parent="7510" name="PK_PERSONAS">
       <ColNames>ID</ColNames>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79216</ObjectId>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79230</ObjectId>
       <Unique>1</Unique>
       <TablespaceName>USERS</TablespaceName>
     </index>
     <key id="7537" parent="7510" name="PK_PERSONAS">
       <InitiallyDeferred>1</InitiallyDeferred>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_PERSONAS</UnderlyingIndexName>
     </key>
@@ -59830,15 +59830,15 @@
     </column>
     <index id="7541" parent="7511" name="PK_PRODUCTOS">
       <ColNames>ID</ColNames>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79218</ObjectId>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79232</ObjectId>
       <Unique>1</Unique>
       <TablespaceName>USERS</TablespaceName>
     </index>
     <key id="7542" parent="7511" name="PK_PRODUCTOS">
       <InitiallyDeferred>1</InitiallyDeferred>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_PRODUCTOS</UnderlyingIndexName>
     </key>
@@ -59854,14 +59854,14 @@
     </column>
     <foreign-key id="7545" parent="7512" name="FK_PROVEEDOR_PERSONA">
       <ColNames>ID_PROVEEDOR</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_PERSONAS</RefKeyName>
       <RefTableName>PERSONAS</RefTableName>
     </foreign-key>
     <foreign-key id="7546" parent="7512" name="FK_PROVEEDOR_PRODUCTO">
       <ColNames>ID_PRODUCTO</ColNames>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <OnDelete>restrict</OnDelete>
       <RefKeyName>PK_PRODUCTOS</RefKeyName>
       <RefTableName>PRODUCTOS</RefTableName>
@@ -59869,15 +59869,15 @@
     <index id="7547" parent="7512" name="PK_PROVEEDOR_PRODUCTO">
       <ColNames>ID_PROVEEDOR
 ID_PRODUCTO</ColNames>
-      <CreatedTimestamp>2024-11-08.03:14:27</CreatedTimestamp>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
-      <ObjectId>79220</ObjectId>
+      <CreatedTimestamp>2024-11-08.09:11:33</CreatedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
+      <ObjectId>79234</ObjectId>
       <Unique>1</Unique>
       <TablespaceName>USERS</TablespaceName>
     </index>
     <key id="7548" parent="7512" name="PK_PROVEEDOR_PRODUCTO">
       <InitiallyDeferred>1</InitiallyDeferred>
-      <ModifiedTimestamp>2024-11-08.03:14:27</ModifiedTimestamp>
+      <ModifiedTimestamp>2024-11-08.09:11:33</ModifiedTimestamp>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_PROVEEDOR_PRODUCTO</UnderlyingIndexName>
     </key>

@@ -21,43 +21,17 @@ import java.util.Date;
 
 public class Principal {
     public static void main(String[] args) {
+        //----Crear un metodo que inserte en la base de datos con por lo menos 5 registros en cada tabla.
+insercionTablas();
+        //-----Crear un metodo que permita consultar todas las facturas de un cliente.
+consultFacturas();
+        //-------Crear un metodo que permita consultar los productos que provee un proveedor.
+consultProveedores();
+        //---------Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
+  totalVendedor();
+    //--------rear un metodo que al ingresar un identificador de factura
+       imprecionFactura();
 
-
-
-        EntityManager em = PersistenceUtil.getEntityManager();
-        Bill bill = em.find(Bill.class, 101);
-
-        if (bill != null) {
-            List<Details> detailsList = bill.getDetails();
-            double totalFactura = 0.0;
-
-            if (!detailsList.isEmpty()) {
-                System.out.println("---------FORMATO FACTURA---------------");
-                System.out.println("Factura: " + bill.getId());
-                System.out.println("Cliente: " + bill.getClienteFactura().getNombres() + "                  FECHA DE COMPRA " + bill.getFecha());
-                System.out.println("                                                       ");
-                System.out.println("ID     Nombre       Cantidad   Valor Unitario   Valor Total");
-
-                for (Details details : detailsList) {
-                    double valorTotal = details.getCantidad() * details.getPrecioVenta();
-                    System.out.println(details.getIdProducto() +
-                            "      " + details.getDetailproducto().getNombre() +
-                            "        " + details.getCantidad() +
-                            "          " + details.getPrecioVenta() +
-                            "          " + valorTotal);
-                    totalFactura += valorTotal;
-                }
-
-                System.out.println("                                            ");
-                System.out.println("                                         " +
-                        "         TOTAL " + totalFactura);
-                System.out.println("Atendido por: " + bill.getVendedorFactura().getNombres());
-            }
-        } else {
-            System.out.println("No existe la factura");
-        }
-
-        em.close();
     }
 
     public static void insercionTablas(){
@@ -207,7 +181,7 @@ public class Principal {
         //Crear un metodo que permita consultar todas las facturas de un cliente.
         EntityManager em = PersistenceUtil.getEntityManager();
 
-        Persons cliente = em.find(Persons.class, 6);
+        Persons cliente = em.find(Persons.class, 2);
         if (cliente != null) {
             //si el cliente existe obtine las facturas
             List<Bill> facturas =cliente.getBillsclien();
@@ -231,7 +205,7 @@ public class Principal {
     public static void consultProveedores(){
         //Crear un metodo que permita consultar los productos que provee un proveedor.
         EntityManager em = PersistenceUtil.getEntityManager();
-        Persons provehedor = em.find(Persons.class, 27);
+        Persons provehedor = em.find(Persons.class, 2);
         //CREACION DE UN PRODUCTO ASOCIADO
 
 
@@ -254,7 +228,7 @@ public class Principal {
         em.close();
     }
 
-    public static void TotalVendedor(){
+    public static void totalVendedor(){
         EntityManager em = PersistenceUtil.getEntityManager();
         //Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
         em.getTransaction().begin();
@@ -287,7 +261,41 @@ public class Principal {
         em.close();
     }
 
-    public static void generacionFactura(){
+    public static void imprecionFactura(){
 
+        EntityManager em = PersistenceUtil.getEntityManager();
+        Bill bill = em.find(Bill.class, 101);
+
+        if (bill != null) {
+            List<Details> detailsList = bill.getDetails();
+            double totalFactura = 0.0;
+
+            if (!detailsList.isEmpty()) {
+                System.out.println("---------FORMATO FACTURA---------------");
+                System.out.println("Factura: " + bill.getId());
+                System.out.println("Cliente: " + bill.getClienteFactura().getNombres() + "                  FECHA DE COMPRA " + bill.getFecha());
+                System.out.println("                                                       ");
+                System.out.println("ID     Nombre       Cantidad   Valor Unitario   Valor Total");
+
+                for (Details details : detailsList) {
+                    double valorTotal = details.getCantidad() * details.getPrecioVenta();
+                    System.out.println(details.getIdProducto() +
+                            "      " + details.getDetailproducto().getNombre() +
+                            "        " + details.getCantidad() +
+                            "          " + details.getPrecioVenta() +
+                            "          " + valorTotal);
+                    totalFactura += valorTotal;
+                }
+
+                System.out.println("                                            ");
+                System.out.println("                                         " +
+                        "         TOTAL " + totalFactura);
+                System.out.println("Atendido por: " + bill.getVendedorFactura().getNombres());
+            }
+        } else {
+            System.out.println("No existe la factura");
+        }
+
+        em.close();
     }
 }
