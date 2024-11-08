@@ -40,6 +40,17 @@ public class Bill {
     @OneToMany(mappedBy = "detailfact")
     private List<Details> details=new ArrayList<>();
 
+    public double getMontoTotal() {
+        double total = 0.0;
+        for (Details detail:details) {
+            Product product=detail.getDetailproducto();
+            if(product!=null) {
+                total+=product.getPrecioUnitario();
+            }
+        }
+        return total;
+    }
+
     public Persons getClienteFactura() {
         return clienteFactura;
     }

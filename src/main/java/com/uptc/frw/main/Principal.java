@@ -15,7 +15,34 @@ import java.util.Date;
 
 public class Principal {
     public static void main(String[] args) {
+        EntityManager em = PersistenceUtil.getEntityManager();
+        //Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
+        em.getTransaction().begin();
+        Persons vendedor =em.find(Persons.class, 1);
+        if (vendedor != null) {
+            List<Bill> bills=vendedor.getBillsVendedor();
+            if (!bills.isEmpty()) {
+                double totalVentas = 0.0;
+                for (Bill bill : bills) {
+                    System.out.println("-------VENTAS-------");
+                    System.out.println("ID VENTA: "+ bill.getId());
+                    System.out.println("FECHA VENTA: "+bill.getFecha());
+                    System.out.println("ID CLIENTE : "+bill.getClienteFactura());
+                    System.out.println("ID VENDEDOR :"+bill.getVendedorFactura());
 
+                    totalVentas += bill.getMontoTotal();
+                }
+
+                System.out.println("TOTAL VENTAS : "+totalVentas);
+            }else {
+                System.out.println("-------el vendedor no ha hecho ventas-------");
+            }
+        }else{
+            System.out.println("no existe el cliente");
+        }
+
+
+        em.close();
 
     }
 
