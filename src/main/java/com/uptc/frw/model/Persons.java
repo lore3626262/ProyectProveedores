@@ -3,6 +3,7 @@ package com.uptc.frw.model;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class Persons {
     private List<Bill> billsVendedor;
 
     @ManyToMany(mappedBy ="Proveedor")
-    private List<Product> products;
+    private List<Product> products=new ArrayList<>();
 
 
     public Long getId() {
@@ -87,6 +88,30 @@ public class Persons {
 
     public void setNumeroDocumento(String numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
+    }
+
+    public List<Bill> getBillsclien() {
+        return billsclien;
+    }
+
+    public void setBillsclien(List<Bill> billsclien) {
+        this.billsclien = billsclien;
+    }
+
+    public List<Bill> getBillsVendedor() {
+        return billsVendedor;
+    }
+
+    public void setBillsVendedor(List<Bill> billsVendedor) {
+        this.billsVendedor = billsVendedor;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     @Override

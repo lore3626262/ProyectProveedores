@@ -11,10 +11,13 @@ import java.math.BigDecimal;
 public class Details {
     @Id
     @Column(name = "ID")
+    @GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "detail_seq")
+    @SequenceGenerator(name ="detail_seq",sequenceName ="DETALLE_SEQ",allocationSize=1 )
     private Long id;
 
 
-    @Column(name = "ID_FACTURA")
+
+    @Column(name = "ID_FACTURA",insertable = false, updatable = false)
     private Long idFactura;
 
     @Column(name = "CANTIDAD")
@@ -24,7 +27,7 @@ public class Details {
     private double precioVenta;
 
 
-    @Column(name = "ID_PRODUCTO")
+    @Column(name = "ID_PRODUCTO",insertable = false, updatable = false)
     private Long idProducto;
 
     @ManyToOne
