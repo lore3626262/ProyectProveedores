@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "PERSONAS")
 public class Persons {
+    //AUTOR:Sandra Lorena Martinez Merchan
     @Id
     //Se genera la secuencia del identificador persona
     @Column(name = "ID")

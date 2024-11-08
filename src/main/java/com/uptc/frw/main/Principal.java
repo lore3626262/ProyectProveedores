@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Date;
 
 
-
+//AUTOR:Sandra Lorena Martinez Merchan
 public class Principal {
     public static void main(String[] args) {
         //----Crear un metodo que inserte en la base de datos con por lo menos 5 registros en cada tabla.

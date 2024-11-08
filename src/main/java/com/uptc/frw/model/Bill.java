@@ -11,6 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "FACTURAS")
+//AUTOR:Sandra Lorena Martinez Merchan
 public class Bill {
     @Id
     @Column(name = "ID")

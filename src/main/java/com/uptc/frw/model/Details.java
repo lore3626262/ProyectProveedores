@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "DETALLES")
 public class Details {
+    //AUTOR:Sandra Lorena Martinez Merchan
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy=GenerationType.SEQUENCE,generator = "detail_seq")
