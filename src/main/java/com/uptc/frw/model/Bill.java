@@ -40,6 +40,8 @@ public class Bill {
     @OneToMany(mappedBy = "detailfact")
     private List<Details> details=new ArrayList<>();
 
+
+
     public double getMontoTotal() {
         double total = 0.0;
         for (Details detail:details) {

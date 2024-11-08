@@ -1,5 +1,6 @@
 package com.uptc.frw.main;
 
+
 import com.uptc.frw.model.Bill;
 import com.uptc.frw.model.Details;
 import com.uptc.frw.model.Persons;
@@ -7,51 +8,57 @@ import com.uptc.frw.model.Product;
 import com.uptc.frw.persistence.PersistenceUtil;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
+import java.util.logging.ConsoleHandler;
+
+
+
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
 
 
+
 public class Principal {
     public static void main(String[] args) {
+
+
+
         EntityManager em = PersistenceUtil.getEntityManager();
-        //Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
-        em.getTransaction().begin();
-        Persons vendedor =em.find(Persons.class, 1);
+        Bill bill = em.find(Bill.class, 101);
 
-        if (vendedor != null) {
-            List<Bill> bills=vendedor.getBillsVendedor();
-            if (!bills.isEmpty()) {
-                double totalVentas = 0.0;
+        if (bill != null) {
+            List<Details> detailsList = bill.getDetails();
+            double totalFactura = 0.0;
 
+            if (!detailsList.isEmpty()) {
+                System.out.println("---------FORMATO FACTURA---------------");
+                System.out.println("Factura: " + bill.getId());
+                System.out.println("Cliente: " + bill.getClienteFactura().getNombres() + "                  FECHA DE COMPRA " + bill.getFecha());
+                System.out.println("                                                       ");
+                System.out.println("ID     Nombre       Cantidad   Valor Unitario   Valor Total");
 
-                for (Bill bill : bills) {
-
-                    totalVentas += bill.getMontoTotal();
+                for (Details details : detailsList) {
+                    double valorTotal = details.getCantidad() * details.getPrecioVenta();
+                    System.out.println(details.getIdProducto() +
+                            "      " + details.getDetailproducto().getNombre() +
+                            "        " + details.getCantidad() +
+                            "          " + details.getPrecioVenta() +
+                            "          " + valorTotal);
+                    totalFactura += valorTotal;
                 }
-                System.out.println("---------VENTAS TOTALES--------------------");
-                System.out.println("                                              ");
-                System.out.println("VENTAS DEL VENDEDOR : "+vendedor.getId());
-                System.out.println("TOTAL VENTAS : "+totalVentas);
 
-
-            }else {
-                System.out.println("-------el vendedor no ha hecho ventas-------");
+                System.out.println("                                            ");
+                System.out.println("                                         " +
+                        "         TOTAL " + totalFactura);
+                System.out.println("Atendido por: " + bill.getVendedorFactura().getNombres());
             }
-        }else{
-            System.out.println("no existe el cliente");
+        } else {
+            System.out.println("No existe la factura");
         }
 
-
         em.close();
-
     }
-
-
-
-
-
 
     public static void insercionTablas(){
         EntityManager em = PersistenceUtil.getEntityManager();
@@ -244,6 +251,39 @@ public class Principal {
         }else{
             System.out.println("no hay proveedores");
         }
+        em.close();
+    }
+
+    public static void TotalVendedor(){
+        EntityManager em = PersistenceUtil.getEntityManager();
+        //Un metodo que a partir del id del vendedor muestre el valor total de las ventas de este.
+        em.getTransaction().begin();
+        Persons vendedor =em.find(Persons.class, 1);
+
+        if (vendedor != null) {
+            List<Bill> bills=vendedor.getBillsVendedor();
+            if (!bills.isEmpty()) {
+                double totalVentas = 0.0;
+
+
+                for (Bill bill : bills) {
+
+                    totalVentas += bill.getMontoTotal();
+                }
+                System.out.println("---------VENTAS TOTALES--------------------");
+                System.out.println("                                              ");
+                System.out.println("VENTAS DEL VENDEDOR : "+vendedor.getId());
+                System.out.println("TOTAL VENTAS : "+totalVentas);
+
+
+            }else {
+                System.out.println("-------el vendedor no ha hecho ventas-------");
+            }
+        }else{
+            System.out.println("no existe el cliente");
+        }
+
+
         em.close();
     }
 }
