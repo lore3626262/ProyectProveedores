@@ -15,6 +15,13 @@ import java.util.Date;
 
 public class Principal {
     public static void main(String[] args) {
+
+    }
+
+
+
+
+    public static void InsercionTablas(){
         EntityManager em = PersistenceUtil.getEntityManager();
 
         // Verificar si la transacción ya está activa
